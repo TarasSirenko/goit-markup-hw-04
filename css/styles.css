@@ -19,8 +19,6 @@
 body {
   font-family: var(--main-font);
   color: var(--text-color);
-  width: 1600px;
-  margin: 0px auto;
 }
 ul,
 h1,
@@ -125,8 +123,12 @@ p {
 /* ------------------------end heder------------------------ */
 /* -------------------------hero----------------------------- */
 .hero {
-  background-color: #2f303a;
   text-align: center;
+  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bgr-hero.jpg);
+  max-width: 1600px;
+  margin: 0 auto;
+  height: 600px;
 }
 .hero .container {
   padding-top: 200px;
@@ -172,6 +174,32 @@ p {
 }
 .benefits-list .item:not(:last-child) {
   margin-right: 30px;
+}
+.benefits-list .item::before {
+  content: ' ';
+  display: inline-flex;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.benefits-list .item:nth-child(1)::before {
+  background-image: url(../images/svg/antenna\ 1.svg);
+  background-size: 66px 70px;
+}
+.benefits-list .item:nth-child(2)::before {
+  background-image: url(../images/svg/clock\ 1.svg);
+  background-size: 68px 70px;
+}
+.benefits-list .item:nth-child(3)::before {
+  background-image: url(../images/svg/diagram\ 1.svg);
+  background-size: 70px 54px;
+}
+.benefits-list .item:nth-child(4)::before {
+  background-image: url(../images/svg/astronaut\ 1.svg);
+  background-size: 70px 70px;
 }
 
 .benefits .container {
